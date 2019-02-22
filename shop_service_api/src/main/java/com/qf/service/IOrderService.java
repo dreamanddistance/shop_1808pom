@@ -12,7 +12,11 @@ import java.util.List;
  */
 public interface IOrderService {
 
-    int addOrder(Integer aid, Integer[] cids, User user);
+    String addOrder(Integer aid, Integer[] cids, User user);
 
     List<Orders> queryByUid(Integer uid);
+
+    Orders queryOrderByOid(String orderid);
+
+    int updateOrderState(Orders orders);
 }
